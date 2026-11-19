@@ -22,9 +22,9 @@ if(menu&&nav){
 }
 /* Actual ministry emblem from a web-published vector asset, with working image fallbacks. */
 const ministryLogoSources=[
- 'https://strapi.wasmenia.com/uploads/Ministry_of_Health_and_population_53e6946920.svg',
- 'https://m.gomhuriaonline.com/Upload/News/13-2-2023_12_25_26_GomhuriaOnline_331676283926.jpg',
  'https://mediaaws-live.almasryalyoum.com/AMAYLivePictures/portalimages/news/original/2024/01/27/2308408_0.jpeg',
+ 'https://m.gomhuriaonline.com/Upload/News/13-2-2023_12_25_26_GomhuriaOnline_331676283926.jpg',
+ 'https://strapi.wasmenia.com/uploads/Ministry_of_Health_and_population_53e6946920.svg',
  'https://www.logodalil.com.eg/images/Gov_Logos/mohp.jpg'
 ];
 document.querySelectorAll('.ministry-box img').forEach(img=>{
