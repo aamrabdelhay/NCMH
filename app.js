@@ -70,3 +70,87 @@ const end=content.querySelector('.page-source');if(end)end.before(box);else cont
 });
 }
 })();
+
+/* Final navigation/footer additions: same original visual system, no homepage redesign. */
+(()=>{
+'use strict';
+const nav=document.querySelector('.nav-links');
+const links=[
+ ['index.html#home','الرئيسية'],
+ ['about.html','عن المجلس'],
+ ['leadership.html','القيادات'],
+ ['achievements.html','الإنجازات والأنشطة'],
+ ['news.html','الأخبار والفعاليات'],
+ ['library.html','التشريعات واللوائح'],
+ ['rights.html','حقوق المرضى']
+];
+if(nav){
+ nav.innerHTML=links.map(([href,label])=>'<a href="'+href+'">'+label+'</a>').join('');
+ const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+ nav.querySelectorAll('a').forEach(a=>{
+  const destination=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
+  if(destination===current){a.classList.add('active');a.setAttribute('aria-current','page');}
+ });
+}
+const officialLogo='https://m.gomhuriaonline.com/Upload/News/13-2-2023_12_25_26_GomhuriaOnline_331676283926.jpg';
+document.querySelectorAll('.ministry-box img,.ministry-logo').forEach(img=>{
+ img.alt='الشعار الرسمي لوزارة الصحة والسكان المصرية';
+ img.referrerPolicy='no-referrer';
+ img.loading='eager';
+ img.decoding='async';
+ if(!img.src||img.src!==officialLogo)img.src=officialLogo;
+ img.addEventListener('error',()=>{
+  if(img.dataset.logoFallback!=='used'){
+   img.dataset.logoFallback='used';
+   img.src='https://www.logodalil.com.eg/images/Gov_Logos/mohp.jpg';
+  }else{
+   img.alt='وزارة الصحة والسكان المصرية';
+   img.title='وزارة الصحة والسكان المصرية';
+  }
+ },{once:false});
+});
+const footer=document.querySelector('footer .footer-inner');
+if(footer){
+ const oldLinks=footer.querySelector('.footer-links');
+ const address='١ شارع صلاح سالم، مدينة نصر، الدور الثالث، مبنى الهيئات التابعة لوزارة الصحة والسكان، القاهرة، مصر';
+ const addressQuery='مبنى الهيئات التابعة لوزارة الصحة والسكان، 1 شارع صلاح سالم، الدور الثالث، مدينة نصر، القاهرة، مصر';
+ const mapsUrl='https://www.google.com/maps/search/?api=1&query='+encodeURIComponent(addressQuery);
+ const embedUrl='https://www.google.com/maps?q='+encodeURIComponent(addressQuery)+'&output=embed';
+ if(oldLinks)oldLinks.remove();
+ let details=footer.querySelector('.footer-details');
+ if(!details){
+  details=document.createElement('div');
+  details.className='footer-details';
+  details.innerHTML=
+   '<section class="footer-contact" aria-label="الأرقام والروابط"><h3>الأرقام والروابط</h3>'+
+   '<a href="tel:01207474740">خط شكاوى المجلس: 01207474740</a>'+
+   '<a href="https://wa.me/201207474740" target="_blank" rel="noopener">واتساب المجلس</a>'+
+   '<a href="tel:16528">منظومة الشكاوى الحكومية: 16528</a>'+
+   '<a href="https://www.shakwa.eg/GCP/Default.aspx" target="_blank" rel="noopener">تقديم شكوى حكومية</a>'+
+   '<a href="https://www.mohp.gov.eg/" target="_blank" rel="noopener">وزارة الصحة والسكان</a></section>'+
+   '<section class="footer-location" aria-label="موقع مقر المجلس"><h3>مقر المجلس</h3>'+
+   '<p>'+address+'</p>'+
+   '<iframe class="footer-map" title="خريطة مقر المجلس القومي للصحة النفسية — 1 شارع صلاح سالم، مدينة نصر" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+embedUrl+'"></iframe>'+
+   '<a class="footer-directions" href="'+mapsUrl+'" target="_blank" rel="noopener">فتح الموقع والاتجاهات على خرائط Google ←</a>'+
+   '</section>';
+  const copyright=footer.querySelector('.copyright');
+  if(copyright)footer.insertBefore(details,copyright);else footer.appendChild(details);
+ }
+}
+const style=document.createElement('style');
+style.textContent=[
+'.nav-links a.active{background:#ffffff19;box-shadow:inset 0 -3px #e00020}',
+'.nav-links a{flex-shrink:0}',
+'.footer-inner{grid-template-columns:1fr auto}',
+'.footer-details{grid-column:1/-1;display:grid;grid-template-columns:minmax(230px,.8fr) minmax(300px,1.2fr);gap:18px;align-items:stretch}',
+'.footer-contact,.footer-location{background:#ffffff0b;border:1px solid #ffffff20;padding:15px 17px;min-width:0}',
+'.footer-contact h3,.footer-location h3{color:#fff;font-size:13px;margin:0 0 9px}',
+'.footer-contact a{display:block;color:#e0e5e8;font-size:11px;margin:7px 0;text-decoration:none}',
+'.footer-contact a:hover,.footer-directions:hover{color:#fff;text-decoration:underline}',
+'.footer-location p{color:#e0e5e8;font-size:11px;margin:0 0 10px}',
+'.footer-map{display:block;width:100%;height:190px;border:1px solid #ffffff42;background:#eef2f4}',
+'.footer-directions{display:inline-block;color:#fff;font-size:10px;font-weight:800;margin-top:9px}',
+'@media(max-width:650px){.footer-details{grid-template-columns:1fr}.footer-map{height:180px}.footer-contact,.footer-location{padding:13px}.footer-inner{grid-template-columns:1fr}.footer-brand{grid-column:1/-1}.footer-links{grid-column:1/-1}}'
+].join('');
+document.head.appendChild(style);
+})();
