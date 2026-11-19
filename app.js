@@ -155,7 +155,7 @@ if(footer){
  footer.querySelector('.footer-links')?.remove();
  footer.querySelector('.footer-details')?.remove();
  const address='١ شارع صلاح سالم، مدينة نصر، الدور الثالث، مبنى الهيئات التابعة لوزارة الصحة والسكان، القاهرة، مصر';
- const exactMap='https://maps.app.goo.gl/MZp1AY81E44D8kqf7?g_st=ac';
+ const exactMap='https://maps.app.goo.gl/3aX59tvc3VanL9a1A?g_st=ac';
  const query='1 شارع صلاح سالم، الدور الثالث، مبنى الهيئات التابعة لوزارة الصحة والسكان، مدينة نصر، القاهرة، مصر';
  const embed='https://maps.google.com/maps?q='+encodeURIComponent(query)+'&output=embed';
  const details=document.createElement('div');details.className='footer-details';
