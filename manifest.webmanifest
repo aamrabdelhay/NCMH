@@ -1,10 +1,11 @@
 {
   "name": "المجلس القومي للصحة النفسية",
   "short_name": "المجلس القومي",
+  "description": "بوابة معلومات المجلس القومي للصحة النفسية والقوانين والأخبار وحقوق المرضى",
   "lang": "ar",
   "dir": "rtl",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#F0F0F0",
-  "theme_color": "#404040"
+  "background_color": "#F4F6F7",
+  "theme_color": "#16384F"
 }
