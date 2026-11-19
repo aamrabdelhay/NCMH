@@ -160,12 +160,12 @@ if(footer){
  const embed='https://maps.google.com/maps?q='+encodeURIComponent(query)+'&output=embed';
  const details=document.createElement('div');details.className='footer-details';
  details.innerHTML=
-  '<section class="footer-contact" aria-label="التواصل مع المجلس"><h3>التواصل مع المجلس</h3>'+
-  '<a class="footer-phone" href="tel:01207474740">☎️ 01207474740 — الخط الساخن للمجلس</a>'+
+  '<section class="footer-contact" aria-label="تواصل معنا"><h3>تواصل معنا</h3>'+
+  '<a class="footer-phone" href="tel:01207474740">☎️ 01207474740 — الخط الساخن</a>'+
   '<div class="footer-socials" aria-label="الصفحات الرسمية للمجلس">'+
-  '<a href="https://www.facebook.com/share/1FR47XmJQ4/" target="_blank" rel="noopener">📘 فيسبوك المجلس</a>'+
-  '<a href="https://www.instagram.com/ncfmh?dmpr=MXJoNGhwZTV3d3dwNA==" target="_blank" rel="noopener">📸 إنستجرام المجلس</a>'+
-  '<a href="https://wa.me/201207474740" target="_blank" rel="noopener">💬 واتساب المجلس</a>'+
+  '<a href="https://www.facebook.com/share/1FR47XmJQ4/" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt="" width="20" height="20" loading="lazy"> <span>Facebook</span></a>'+
+  '<a href="https://www.instagram.com/ncfmh?dmpr=MXJoNGhwZTV3d3dwNA==" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" width="20" height="20" loading="lazy"> <span>Instagram</span></a>'+
+  '<a href="https://wa.me/201207474740" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="" width="20" height="20" loading="lazy"> <span>WhatsApp</span></a>'+
   '</div><a class="footer-ministry" href="https://www.mohp.gov.eg/" target="_blank" rel="noopener">وزارة الصحة والسكان</a></section>'+
   '<section class="footer-location" aria-label="موقع مقر المجلس"><h3>مقر المجلس</h3><p>'+address+'</p>'+
   '<iframe class="footer-map" title="خريطة مقر المجلس القومي للصحة النفسية — شارع صلاح سالم، مدينة نصر" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+embed+'"></iframe>'+
