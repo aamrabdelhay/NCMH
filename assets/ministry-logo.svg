@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
+<circle cx="120" cy="132" r="99" fill="#fff" stroke="#d71920" stroke-width="17"/>
+<circle cx="120" cy="128" r="65" fill="#fff" stroke="#0873b9" stroke-width="11"/>
+<path d="M69 47 43 36 22 17 55 20 76 30 91 12 109 26 120 8 131 26 149 12 164 30 185 20 218 17 197 36 171 47 154 44 146 57 94 57 86 44Z" fill="#c8a34a" stroke="#a88327" stroke-width="3"/>
+<path d="M100 36h40l-4 29h-32Z" fill="#f4f4f4" stroke="#a88327" stroke-width="2"/><path d="M101 37h19v27h-19Z" fill="#d71920"/><path d="M120 37h19v27h-19Z" fill="#111"/>
+<circle cx="97" cy="100" r="13" fill="#0873b9"/><circle cx="144" cy="100" r="13" fill="#0873b9"/>
+<path d="M64 151q8-34 32-34t32 34v28H64Zm68 0q8-34 32-34t32 34v28h-64Z" fill="#0873b9"/>
+<circle cx="120" cy="145" r="11" fill="#fff"/><path d="M104 186q3-27 16-27t16 27v17h-32Z" fill="#0873b9"/>
+<path d="M31 184q89 43 178 0" fill="none" stroke="#d71920" stroke-width="5"/>
+<text x="120" y="210" font-family="Arial,sans-serif" text-anchor="middle" font-size="13" font-weight="bold" fill="#d71920">وزارة الصحة والسكان</text>
+</svg>
