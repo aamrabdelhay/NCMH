@@ -51,9 +51,9 @@ if((location.pathname.split('/').pop()||'').toLowerCase()==='library.html'){
 const docs=[
 ['law-71-2009','قانون رعاية المريض النفسي رقم 71 لسنة 2009','https://manshurat.org/sites/default/files/docs/pdf/016167.pdf','https://manshurat.org/node/14473'],
 ['amendment-210-2020','القانون رقم 210 لسنة 2020','https://manshurat.org/sites/default/files/48%20%D9%85%D9%83%D8%B1%D8%B1%20%D8%AC%20%D9%85%D8%A4%D9%85%D9%86_1.pdf','https://manshurat.org/node/68934'],
-['executive-regulations','اللائحة التنفيذية — قرار 128 لسنة 2010','https://manshurat.org/sites/default/files/128-2010.pdf','https://manshurat.org/node/71205'],
-['amendment-210-2011','قرار تعديل اللائحة رقم 210 لسنة 2011','https://manshurat.org/sites/default/files/docs/pdf/008675.pdf','https://manshurat.org/node/10587'],
-['decision-55-2021','قرار وزير الصحة رقم 55 لسنة 2021','https://manshurat.org/sites/default/files/37-%D9%82%D8%B1%D8%A7%D8%B1%20%D9%88%D8%B2%D9%8A%D8%B1%20%D8%A7%D9%84%D8%B5%D8%AD%D8%A9%20%D9%88%D8%A7%D9%84%D8%B3%D9%83%D8%A7%D9%86%20%D8%B1%D9%82%D9%85%2055%20%D9%84%D8%B3%D9%86%D8%A9%202021.pdf','https://manshurat.org/node/74232']
+['executive-regulations','اللائحة التنفيذية — قرار 128 لسنة 2010','https://manshurat.org/file/82930/download?token=pzwFaWTj','https://manshurat.org/node/71205'],
+['amendment-210-2011','قرار تعديل اللائحة رقم 210 لسنة 2011','https://manshurat.org/file/19753/download?token=0a3ocYN1','https://manshurat.org/node/10587'],
+['decision-55-2021','قرار وزير الصحة رقم 55 لسنة 2021','https://manshurat.org/file/86707/download?token=mThphVBo','https://manshurat.org/node/74232']
 ];
 docs.forEach(([id,name,pdf,source])=>{
 const content=document.getElementById(id)?.querySelector('.law-content');
