@@ -158,8 +158,10 @@ if(footer){
  footer.querySelector('.footer-details')?.remove();
  const address='١ شارع صلاح سالم، مدينة نصر، الدور الثالث، مبنى الهيئات التابعة لوزارة الصحة والسكان، القاهرة، مصر';
  const exactMap='https://maps.app.goo.gl/3aX59tvc3VanL9a1A?g_st=ac';
- const query='1 شارع صلاح سالم، الدور الثالث، مبنى الهيئات التابعة لوزارة الصحة والسكان، مدينة نصر، القاهرة، مصر';
- const embed=exactMap;
+ const query='المجلس القومي للصحة النفسية، 1 شارع صلاح سالم، بجوار أرض المعارض، مدينة نصر، القاهرة، مصر';
+ /* Short maps.app.goo.gl links are redirect/share links, not embeddable map documents.
+    Use Google's embeddable search URL for the visible map; retain the exact shared pin for directions. */
+ const embed='https://www.google.com/maps?q='+encodeURIComponent(query)+'&output=embed';
  const details=document.createElement('div');details.className='footer-details';
  details.innerHTML=
   '<section class="footer-contact" aria-label="تواصل معنا"><h3>تواصل معنا</h3>'+
@@ -170,7 +172,7 @@ if(footer){
   '<a href="https://wa.me/201207474740" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/whatsapp/25D366" alt="" width="20" height="20" loading="lazy"> <span>WhatsApp</span></a>'+
   '</div><a class="footer-ministry" href="https://www.mohp.gov.eg/" target="_blank" rel="noopener">وزارة الصحة والسكان</a></section>'+
   '<section class="footer-location" aria-label="موقع مقر المجلس"><h3>مقر المجلس</h3><p>'+address+'</p>'+
-  '<iframe class="footer-map" title="خريطة مقر المجلس القومي للصحة النفسية — شارع صلاح سالم، مدينة نصر" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+embed+'"></iframe>'+
+  '<iframe class="footer-map" title="خريطة مقر المجلس القومي للصحة النفسية — شارع صلاح سالم، مدينة نصر" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+embed+'" referrerpolicy="no-referrer-when-downgrade"></iframe>'+
   '<a class="footer-directions" href="'+exactMap+'" target="_blank" rel="noopener">📍 فتح دبوس الموقع المحدد على خرائط Google ←</a></section>';
  const copyright=footer.querySelector('.copyright');if(copyright)footer.insertBefore(details,copyright);else footer.appendChild(details);
 }
