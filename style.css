@@ -119,3 +119,9 @@ footer{background:var(--foot);color:white;padding:23px 0 13px}.footer-inner{disp
 .footer-socials a img{display:block;width:20px;height:20px;object-fit:contain;flex:none}
 .footer-socials a span{font-size:12px;font-weight:700;letter-spacing:.1px}
 @media(max-width:650px){.footer-socials{gap:12px 18px}.footer-socials a img{width:22px;height:22px}}
+
+/* Official social brand artwork */
+.footer-socials a{display:inline-flex!important;align-items:center;gap:8px;min-height:30px}
+.footer-socials a img{display:block;width:22px;height:22px;object-fit:contain;flex:none}
+.footer-socials a span{font-size:12px;font-weight:700;direction:ltr}
+@media(max-width:650px){.footer-socials{gap:12px 18px}.footer-socials a img{width:24px;height:24px}}
