@@ -1,0 +1,36 @@
+
+/* Add-on pages: uses the original council site colors, typography and components */
+.inner-page{padding:30px 0 40px}
+.inner-page .section-title{margin-bottom:14px}
+.inner-page .main-copy{margin-bottom:16px}
+.inner-page .page-lead{font-size:12px;color:#5e6d76;margin:4px 0 18px}
+.inner-page .page-breadcrumb{font-size:10px;color:#7a8790;margin-bottom:7px}
+.inner-page .page-breadcrumb a{color:#0070b0}
+.inner-page h1{font-size:25px;color:#203e54;margin:0 0 7px}
+.inner-page .page-kicker{color:#e00020;font-size:11px;font-weight:800}
+.inner-page .page-panel{background:#fff;border:1px solid #d4dce1;padding:18px 20px;margin:14px 0}
+.inner-page .page-panel h2{font-size:17px;color:#27495f;margin:0 0 8px}
+.inner-page .page-panel h3{font-size:14px;color:#28516a;margin:15px 0 5px}
+.inner-page .page-panel p,.inner-page .page-panel li{font-size:12px;color:#4c5b65}
+.inner-page .page-panel ul{padding-right:20px}
+.inner-page .page-source{border-top:1px solid #e1e7ea;margin-top:15px;padding-top:10px;font-size:11px}
+.inner-page .page-source a{color:#0070b0;font-weight:800;text-decoration:underline}
+.inner-page .law-item{background:#fff;border:1px solid #d4dce1;margin:12px 0}
+.inner-page .law-item summary{padding:13px 16px;cursor:pointer;background:#f6f8f9;color:#27495f;font-size:14px;font-weight:800}
+.inner-page .law-content{padding:14px 18px;border-top:1px solid #d4dce1}
+.inner-page .story-item{background:#fff;border:1px solid #d4dce1;margin:13px 0;scroll-margin-top:80px}
+.inner-page .story-item summary{padding:14px 17px;cursor:pointer;background:#f6f8f9;color:#27495f;font-size:14px;font-weight:800}
+.inner-page .story-body{padding:15px 18px;border-top:1px solid #d4dce1}
+.inner-page .story-date{display:block;color:#e00020;font-size:10px;font-weight:800;margin-bottom:8px}
+.inner-page .profile-card{background:#fff;border:1px solid #d4dce1;border-right:4px solid #0070b0;padding:15px 17px;margin:10px 0}
+.inner-page .profile-card h3{font-size:15px;color:#27495f;margin:0 0 4px}
+.inner-page .profile-card .role{font-size:10px;color:#e00020;font-weight:800}
+.inner-page .profile-card p{font-size:11px;color:#53636d;margin:7px 0}
+.inner-page .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.inner-page .stat-box{background:#fff;border:1px solid #d4dce1;text-align:center;padding:13px 9px}
+.inner-page .stat-box strong{display:block;font-size:23px;color:#0070b0}
+.inner-page .stat-box span{font-size:10px;color:#687680}
+.inner-page .timeline-entry{border-right:3px solid #80c0d0;padding:2px 14px 18px;margin:12px 0}
+.inner-page .timeline-entry h3{font-size:14px;color:#27495f;margin:0 0 5px}
+.inner-page .timeline-entry p{font-size:11px;color:#596871;margin:0}
+@media(max-width:650px){.inner-page{padding:22px 0 30px}.inner-page h1{font-size:20px}.inner-page .stats-grid{grid-template-columns:repeat(2,1fr)}.inner-page .page-panel{padding:14px}.inner-page .law-content,.inner-page .story-body{padding:12px}}
