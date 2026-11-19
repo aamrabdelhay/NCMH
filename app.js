@@ -92,22 +92,28 @@ if(nav){
   if(destination===current){a.classList.add('active');a.setAttribute('aria-current','page');}
  });
 }
-const officialLogo='https://m.gomhuriaonline.com/Upload/News/13-2-2023_12_25_26_GomhuriaOnline_331676283926.jpg';
+const officialLogoUrls=[
+ 'https://mediaaws-live.almasryalyoum.com/AMAYLivePictures/portalimages/news/original/2024/01/27/2308408_0.jpeg',
+ 'https://m.gomhuriaonline.com/Upload/News/13-2-2023_12_25_26_GomhuriaOnline_331676283926.jpg',
+ 'https://www.logodalil.com.eg/images/Gov_Logos/mohp.jpg'
+];
 document.querySelectorAll('.ministry-box img,.ministry-logo').forEach(img=>{
  img.alt='الشعار الرسمي لوزارة الصحة والسكان المصرية';
  img.referrerPolicy='no-referrer';
  img.loading='eager';
  img.decoding='async';
- if(!img.src||img.src!==officialLogo)img.src=officialLogo;
+ img.dataset.logoTry='0';
+ img.src=officialLogoUrls[0];
  img.addEventListener('error',()=>{
-  if(img.dataset.logoFallback!=='used'){
-   img.dataset.logoFallback='used';
-   img.src='https://www.logodalil.com.eg/images/Gov_Logos/mohp.jpg';
+  const next=Number(img.dataset.logoTry||'0')+1;
+  if(next<officialLogoUrls.length){
+   img.dataset.logoTry=String(next);
+   img.src=officialLogoUrls[next];
   }else{
    img.alt='وزارة الصحة والسكان المصرية';
    img.title='وزارة الصحة والسكان المصرية';
   }
- },{once:false});
+ });
 });
 const footer=document.querySelector('footer .footer-inner');
 if(footer){
