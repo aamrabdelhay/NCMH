@@ -1,11 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
-<circle cx="120" cy="132" r="99" fill="#fff" stroke="#d71920" stroke-width="17"/>
-<circle cx="120" cy="128" r="65" fill="#fff" stroke="#0873b9" stroke-width="11"/>
-<path d="M69 47 43 36 22 17 55 20 76 30 91 12 109 26 120 8 131 26 149 12 164 30 185 20 218 17 197 36 171 47 154 44 146 57 94 57 86 44Z" fill="#c8a34a" stroke="#a88327" stroke-width="3"/>
-<path d="M100 36h40l-4 29h-32Z" fill="#f4f4f4" stroke="#a88327" stroke-width="2"/><path d="M101 37h19v27h-19Z" fill="#d71920"/><path d="M120 37h19v27h-19Z" fill="#111"/>
-<circle cx="97" cy="100" r="13" fill="#0873b9"/><circle cx="144" cy="100" r="13" fill="#0873b9"/>
-<path d="M64 151q8-34 32-34t32 34v28H64Zm68 0q8-34 32-34t32 34v28h-64Z" fill="#0873b9"/>
-<circle cx="120" cy="145" r="11" fill="#fff"/><path d="M104 186q3-27 16-27t16 27v17h-32Z" fill="#0873b9"/>
-<path d="M31 184q89 43 178 0" fill="none" stroke="#d71920" stroke-width="5"/>
-<text x="120" y="210" font-family="Arial,sans-serif" text-anchor="middle" font-size="13" font-weight="bold" fill="#d71920">وزارة الصحة والسكان</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+<title id="title">وزارة الصحة والسكان المصرية</title>
+<desc id="desc">رسم متجهي محلي لشعار وزارة الصحة والسكان المصرية، مستوحى من الشعار الدائري الرسمي ذي النسر المصري ورمز الأسرة.</desc>
+<defs><path id="eng" d="M92 259 A164 164 0 0 1 420 259"/></defs>
+<circle cx="256" cy="270" r="245" fill="#b70d27"/>
+<circle cx="256" cy="270" r="207" fill="#fff"/>
+<circle cx="256" cy="270" r="203" fill="none" stroke="#b70d27" stroke-width="5"/>
+<circle cx="256" cy="275" r="140" fill="#0873bd"/>
+<circle cx="256" cy="275" r="119" fill="#fff"/>
+<g fill="#0873bd">
+ <circle cx="205" cy="224" r="22"/><path d="M169 292Q169 257 188 251Q205 245 222 251Q243 258 243 292V356H169Z"/>
+ <circle cx="306" cy="224" r="22"/><path d="M269 292Q269 257 288 251Q306 245 323 251Q343 258 343 292V356H269Z"/>
+ <circle cx="256" cy="288" r="15"/><path d="M232 346Q232 321 244 316Q256 311 268 316Q280 321 280 346V362H232Z"/>
+</g>
+<g fill="#b58a2b" stroke="#98711f" stroke-width="2" stroke-linejoin="round">
+ <path d="M256 20C225 34 196 34 160 20C173 45 194 61 220 72C194 76 165 68 137 51C151 78 180 96 211 101L239 88L256 106L273 88L301 101C332 96 361 78 375 51C347 68 318 76 292 72C318 61 339 45 352 20C316 34 287 34 256 20Z"/>
+ <path d="M239 44Q256 30 273 44L282 88L270 116H242L230 88Z"/>
+ <path d="M256 54L279 65L274 94L256 107L238 94L233 65Z" fill="#fff"/>
+ <path d="M238 65H256V104L240 94Z" fill="#ce2028" stroke="none"/>
+ <path d="M256 65H274L272 94L256 104Z" fill="#171717" stroke="none"/>
+ <path d="M248 75H264V92H248Z" fill="#fff" stroke="none"/>
+ <path d="M256 110L246 129L256 145L266 129Z"/>
+</g>
+<text fill="#111" font-family="Arial,sans-serif" font-weight="700" font-size="16" letter-spacing=".3"><textPath href="#eng" startOffset="50%" text-anchor="middle">MINISTRY OF HEALTH &amp; POPULATION</textPath></text>
+<text x="256" y="478" text-anchor="middle" fill="#fff" font-family="Tahoma,Arial,sans-serif" font-size="24" font-weight="700" direction="rtl">وزارة الصحة والسكان</text>
 </svg>
