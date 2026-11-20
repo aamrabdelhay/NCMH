@@ -20,26 +20,12 @@ if(menu&&nav){
   }
  });
 }
-/* Actual ministry emblem from a web-published vector asset, with working image fallbacks. */
-const ministryLogoSources=[
- 'https://mediaaws-live.almasryalyoum.com/AMAYLivePictures/portalimages/news/original/2024/01/27/2308408_0.jpeg',
- 'https://m.gomhuriaonline.com/Upload/News/13-2-2023_12_25_26_GomhuriaOnline_331676283926.jpg',
- 'https://strapi.wasmenia.com/uploads/Ministry_of_Health_and_population_53e6946920.svg',
- 'https://www.logodalil.com.eg/images/Gov_Logos/mohp.jpg'
-];
+/* The exact Ministry of Health emblem supplied for this site is stored locally. */
 document.querySelectorAll('.ministry-box img').forEach(img=>{
+ img.src='/assets/ministry-logo.svg';
  img.alt='الشعار الرسمي لوزارة الصحة والسكان المصرية';
- img.width=84;img.height=84;img.loading='eager';img.decoding='async';
- img.referrerPolicy='no-referrer';img.fetchPriority='high';
- img.dataset.logoSource='0';img.src=ministryLogoSources[0];
- img.addEventListener('error',()=>{
-  const next=Number(img.dataset.logoSource||'0')+1;
-  if(next<ministryLogoSources.length){
-   img.dataset.logoSource=String(next);img.src=ministryLogoSources[next];
-  }else{
-   img.style.display='none';img.classList.add('logo-unavailable');
-  }
- });
+ img.width=84;img.height=84;img.loading='eager';img.decoding='async';img.fetchPriority='high';
+ img.onerror=()=>{img.style.display='none';img.classList.add('logo-unavailable');};
 });
 /* The Council emblem is served locally from the site's own SVG file. */
 document.querySelectorAll('img.council-logo,.footer-brand img').forEach(img=>{
