@@ -140,7 +140,7 @@ if(footer){
  const details=document.createElement('div');details.className='footer-details';
  details.innerHTML=
   '<section class="footer-contact" aria-label="تواصل معنا"><h3>تواصل معنا</h3>'+
-  '<a class="footer-phone" href="tel:01207474740">01207474740 — الخط الساخن</a>'+
+  '<a class="footer-phone" href="tel:01207474740">الخط الساخن: 01207474740</a>'+
   '<div class="footer-socials" aria-label="الصفحات الرسمية للمجلس">'+
   '<a href="https://www.facebook.com/share/1FR47XmJQ4/" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/facebook/1877F2" alt="" width="20" height="20" loading="lazy"> <span>Facebook</span></a>'+
   '<a href="https://www.instagram.com/ncfmh?dmpr=MXJoNGhwZTV3d3dwNA==" target="_blank" rel="noopener"><img src="https://cdn.simpleicons.org/instagram/E4405F" alt="" width="20" height="20" loading="lazy"> <span>Instagram</span></a>'+

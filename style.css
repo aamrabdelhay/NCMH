@@ -125,3 +125,6 @@ footer{background:var(--foot);color:white;padding:23px 0 13px}.footer-inner{disp
 .footer-socials a img{display:block;width:22px;height:22px;object-fit:contain;flex:none}
 .footer-socials a span{font-size:12px;font-weight:700;direction:ltr}
 @media(max-width:650px){.footer-socials{gap:12px 18px}.footer-socials a img{width:24px;height:24px}}
+
+/* Center the copyright notice across the full footer width. */
+.copyright{text-align:center!important;justify-self:stretch;width:100%;}
