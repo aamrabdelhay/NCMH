@@ -5,7 +5,7 @@ if(nav){
  const current=(location.pathname.split('/').pop()||'index.html').toLowerCase();
  nav.querySelectorAll('a').forEach(a=>{
   const target=(a.getAttribute('href')||'').split('#')[0].toLowerCase();
-  if(target===current){a.classList.add('active');a.setAttribute('aria-current','page');}
+  if(target===current||(current==='legal.html'&&target==='library.html')){a.classList.add('active');a.setAttribute('aria-current','page');}
  });
 }
 if(menu&&nav){
@@ -125,31 +125,6 @@ if(track){
  track.addEventListener('pointerup',stopDrag);track.addEventListener('pointercancel',stopDrag);
  document.addEventListener('visibilitychange',()=>{if(!document.hidden)active=nearest();});
  if(window.matchMedia?.('(prefers-reduced-motion: reduce)').matches)clearInterval(autoTimer);
-}
-/* Five legal documents: open the matching PDF directly, without Google Docs Viewer. */
-if((location.pathname.split('/').pop()||'').toLowerCase()==='library.html'){
- const docs=[
-  ['law-71-2009','قانون رعاية المريض النفسي رقم 71 لسنة 2009','https://manshurat.org/file/26717/download?token=Ny99P2gb','https://manshurat.org/node/14473'],
-  ['amendment-210-2020','القانون رقم 210 لسنة 2020','https://manshurat.org/file/80629/download?token=r8ozvoA4','https://manshurat.org/node/68934'],
-  ['executive-regulations','اللائحة التنفيذية — قرار 128 لسنة 2010','https://manshurat.org/file/82930/download?token=pzwFaWTj','https://manshurat.org/node/71205'],
-  ['amendment-210-2011','قرار تعديل اللائحة رقم 210 لسنة 2011','https://manshurat.org/file/19753/download?token=0a3ocYN1','https://manshurat.org/node/10587'],
-  ['decision-55-2021','قرار وزير الصحة رقم 55 لسنة 2021','https://manshurat.org/file/86707/download?token=mThphVBo','https://manshurat.org/node/74232']
- ];
- docs.forEach(([id,name,pdf,source])=>{
-  const content=document.getElementById(id)?.querySelector('.law-content');
-  if(!content||content.querySelector('.doc-viewer'))return;
-  const box=document.createElement('section');box.className='doc-viewer';
-  const label=document.createElement('p');label.textContent='النص الكامل — '+name;
-  const frame=document.createElement('iframe');frame.loading='lazy';frame.title=name+' — ملف PDF';
-  frame.src=pdf;frame.setAttribute('allow','fullscreen');
-  frame.style.width='100%';frame.style.minHeight='70vh';frame.style.border='1px solid #d8d8d8';frame.style.borderRadius='10px';
-  const actions=document.createElement('div');actions.className='doc-open';
-  const pdfLink=document.createElement('a');pdfLink.href=pdf;pdfLink.target='_blank';pdfLink.rel='noopener';pdfLink.textContent='فتح ملف PDF في نافذة مستقلة';
-  const downloadLink=document.createElement('a');downloadLink.href=pdf;downloadLink.setAttribute('download','');downloadLink.textContent='تحميل ملف PDF';
-  const sourceLink=document.createElement('a');sourceLink.href=source;sourceLink.target='_blank';sourceLink.rel='noopener';sourceLink.textContent='صفحة المصدر وبيانات النشر';
-  actions.append(pdfLink,downloadLink,sourceLink);box.append(label,frame,actions);
-  const end=content.querySelector('.page-source');if(end)end.before(box);else content.append(box);
- });
 }
 /* Footer: Council hotline, social accounts and the exact user-supplied map pin. */
 const footer=document.querySelector('footer .footer-inner');
