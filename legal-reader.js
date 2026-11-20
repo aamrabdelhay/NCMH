@@ -19,7 +19,7 @@
   byId('legal-subtitle').textContent=doc.subtitle||'';
   const meta=[
     ['جهة الإصدار',doc.authority],['تاريخ الإصدار',doc.issued],['تاريخ النشر',doc.published],
-    ['تاريخ العمل',doc.effective],['النسخة المعروضة',doc.version]
+    ['تاريخ العمل',doc.effective]
   ];
   byId('legal-meta').innerHTML=meta.map(([k,v])=>v?'<div><b>'+k+'</b><span>'+v+'</span></div>':'').join('');
   const toc=byId('legal-toc'),content=byId('legal-content');
@@ -32,7 +32,7 @@
     const p=document.createElement('p');p.textContent=block.text;
     section.append(h,p);content.appendChild(section);
   });
-  byId('legal-source-description').textContent=doc.sourceDescription||'';
+  const sourceDescription=byId('legal-source-description');if(sourceDescription)sourceDescription.remove();
   const source=byId('legal-source-link');source.href=doc.source;source.textContent='الرجوع إلى صفحة المصدر';
   const search=byId('legal-search'),count=byId('legal-search-count');
   search.addEventListener('input',()=>{

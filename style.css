@@ -158,3 +158,11 @@ section[id],main[id]{scroll-margin-top:76px}
 .ministry-box{background:transparent!important}
 .ministry-box img{width:84px;height:84px;max-width:100%;object-fit:contain;background:transparent!important}
 @media(max-width:650px){.ministry-box img{width:56px;height:56px}}
+
+/* Official Ministry of Health emblem supplied by the site owner. */
+.ministry-box{width:80px!important;height:98px!important;background:transparent!important;flex:none!important}
+.ministry-box img{display:block;width:80px!important;height:98px!important;max-width:100%;object-fit:contain!important;background:transparent!important}
+@media(max-width:650px){
+ .ministry-box{width:52px!important;height:64px!important}
+ .ministry-box img{width:52px!important;height:64px!important}
+}

@@ -22,9 +22,9 @@ if(menu&&nav){
 }
 /* The exact Ministry of Health emblem supplied for this site is stored locally. */
 document.querySelectorAll('.ministry-box img').forEach(img=>{
- img.src='/assets/ministry-logo.svg';
+ img.src='/assets/ministry-logo.png';
  img.alt='الشعار الرسمي لوزارة الصحة والسكان المصرية';
- img.width=84;img.height=84;img.loading='eager';img.decoding='async';img.fetchPriority='high';
+ img.width=80;img.height=98;img.loading='eager';img.decoding='async';img.fetchPriority='high';
  img.onerror=()=>{img.style.display='none';img.classList.add('logo-unavailable');};
 });
 /* The Council emblem is served locally from the site's own SVG file. */
