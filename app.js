@@ -151,6 +151,27 @@ if(footer){
   '</section>';
  const copyright=footer.querySelector('.copyright');if(copyright)footer.insertBefore(details,copyright);else footer.appendChild(details);
 }
+/* Lightweight reveal on scroll in either direction; no scroll listeners or layout reads. */
+const reduceMotion=window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+const revealTargets=document.querySelectorAll(
+ '.intro-content,.content-section .section-title,.main-copy,.side-panel,.official-grid article,'+
+ '.achievement-row:not(.heading-row),.rights-list>div,.rights-note,.contact-box,.source-group,.news-photo-card'
+);
+if(!reduceMotion&&'IntersectionObserver' in window){
+ const revealObserver=new IntersectionObserver(entries=>{
+  entries.forEach(entry=>{
+   entry.target.classList.toggle('is-visible',entry.isIntersecting);
+  });
+ },{threshold:.12,rootMargin:'0px 0px -5% 0px'});
+ revealTargets.forEach(el=>{el.classList.add('motion-reveal');revealObserver.observe(el);});
+}else{
+ revealTargets.forEach(el=>el.classList.add('is-visible'));
+}
+const stickyNav=document.querySelector('.main-nav');
+if(stickyNav){
+ const updateNav=()=>stickyNav.classList.toggle('is-scrolled',window.scrollY>12);
+ window.addEventListener('scroll',updateNav,{passive:true});updateNav();
+}
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
 const back=document.querySelector('.back-top');
 if(back){const update=()=>back.classList.toggle('show',window.scrollY>400);window.addEventListener('scroll',update,{passive:true});update();back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
