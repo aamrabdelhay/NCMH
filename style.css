@@ -153,3 +153,8 @@ section[id],main[id]{scroll-margin-top:76px}
  .motion-reveal{opacity:1!important;transform:none!important;transition:none!important;will-change:auto!important}
  .back-top,.main-nav,.nav-links a,.news-photo-card,.official-grid article,.contact-box,.source-group{transition:none!important}
 }
+
+/* Supplied Ministry emblem: transparent background and uncropped proportions. */
+.ministry-box{background:transparent!important}
+.ministry-box img{width:84px;height:84px;max-width:100%;object-fit:contain;background:transparent!important}
+@media(max-width:650px){.ministry-box img{width:56px;height:56px}}
