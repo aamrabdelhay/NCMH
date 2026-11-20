@@ -148,7 +148,7 @@ if(footer){
   '</div><a class="footer-ministry" href="https://www.mohp.gov.eg/" target="_blank" rel="noopener">وزارة الصحة والسكان</a></section>'+
   '<section class="footer-location" aria-label="موقع مقر المجلس"><h3>مقر المجلس</h3><p>'+address+'</p>'+
   '<iframe class="footer-map" title="خريطة مقر المجلس القومي للصحة النفسية — شارع صلاح سالم، مدينة نصر" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="'+embed+'" referrerpolicy="no-referrer-when-downgrade"></iframe>'+
-  '<a class="footer-directions" href="'+exactMap+'" target="_blank" rel="noopener">📍 فتح دبوس الموقع المحدد على خرائط Google ←</a></section>';
+  '</section>';
  const copyright=footer.querySelector('.copyright');if(copyright)footer.insertBefore(details,copyright);else footer.appendChild(details);
 }
 document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());

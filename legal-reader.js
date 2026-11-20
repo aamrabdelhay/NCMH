@@ -22,10 +22,6 @@
     ['تاريخ العمل',doc.effective],['النسخة المعروضة',doc.version]
   ];
   byId('legal-meta').innerHTML=meta.map(([k,v])=>v?'<div><b>'+k+'</b><span>'+v+'</span></div>':'').join('');
-  const isComplete=doc.completeness==='complete';
-  const status=byId('legal-status');
-  status.className='legal-status '+(isComplete?'is-complete':'is-partial');
-  status.innerHTML='<strong>'+(isComplete?'حالة النص: تم تفريغ القرار':'حالة النص: تفريغ جزئي موثق')+'</strong><p>'+doc.status+'</p>';
   const toc=byId('legal-toc'),content=byId('legal-content');
   const escapeHtml=(s)=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   doc.blocks.forEach((block,i)=>{
