@@ -9,7 +9,7 @@
   if(!doc){
     title.textContent='التشريع غير موجود';
     byId('legal-subtitle').textContent='لم يتم العثور على هذه الصفحة في مكتبة التشريعات.';
-    byId('legal-status').textContent='ارجع إلى مكتبة القوانين واللوائح واختر التشريع المطلوب.';
+    byId('legal-subtitle').textContent='';
     byId('legal-content').innerHTML='<p><a href="library.html">العودة إلى مكتبة التشريعات</a></p>';
     return;
   }
